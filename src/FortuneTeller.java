@@ -48,10 +48,24 @@ int siblings = input.nextInt();
 	}else if (siblings <0) {
 		vacation = "Russia";}
 	
-	
+	String transportation;
+	switch (favoriteColor.toLowerCase()) {
+	case "r": transportation = "camel";
+	break;
+	case "o": transportation="bat";
+	break;
+	case "y": transportation = "bear";
+	break;
+	case "g": transportation = "bull";
+	break;
+	case "b": transportation = "dog";
+	break;
+	case "i": transportation = "cat";
+	break;
+	case "v": transportation = "horse";
+	break;
+	}
+	}
+
 	}
 	
-	
-	
-	
-	}
