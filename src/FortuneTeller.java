@@ -34,6 +34,24 @@ int siblings = input.nextInt();
 	}else if (!(age %2==0)){
 	retirement="never";}
 	
+	String vacation;
+	if (siblings==0) {
+		vacation = "Salem, Ohio";
+	}else if (siblings ==1) {
+		vacation = "Centralia, Pennsylvania";
+	}else if (siblings ==2) {
+		vacation = "Batesville, Indiana";
+	}else if (siblings ==3) {
+		vacation = "Spitsbergen, Norway";
+	}else if (siblings >3) {
+		vacation = "Kona, Hawaii";
+	}else if (siblings <0) {
+		vacation = "Russia";}
 	
-	System.out.println();
-	}}
+	
+	}
+	
+	
+	
+	
+	}
