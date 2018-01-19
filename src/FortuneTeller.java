@@ -13,13 +13,6 @@ public class FortuneTeller {
 		int age = input.nextInt();
 		System.out.println("Please enter your birth month in numeric form.");
 		int birthMonth = input.nextInt();
-		if (birthMonth > 12 | birthMonth <= 0)
-		{
-			System.out.println("Please enter a month from 1-12.");
-			input.next();
-
-		}
-		else if (birthMonth < 12 && birthMonth > 0); input.next();
 
 		System.out.println("Please enter your favorite color from ROYGBIV.  Type 'help' for examples.");
 		String color = input.nextLine();
