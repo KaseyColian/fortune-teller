@@ -11,6 +11,13 @@ public class FortuneTeller {
 		String lastName = input.nextLine();
 		System.out.println ("Please enter your age.");
 		int age = input.nextInt();
+		System.out.println("Please enter your birth month in numeric form.");
+		int birthMonth = input.nextInt();
+		if (birthMonth>12)
+			System.out.println("Please enter a month from 1-12.");
+		
+			
+		
 		
 				
 	}
