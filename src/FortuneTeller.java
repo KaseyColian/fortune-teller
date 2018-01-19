@@ -9,7 +9,10 @@ public class FortuneTeller {
 		String firstName = input.nextLine();
 		System.out.println("Please enter your last name.");
 		String lastName = input.nextLine();
+		System.out.println ("Please enter your age.");
+		int age = input.nextInt();
 		
+				
 	}
 
 }
