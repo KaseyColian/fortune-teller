@@ -15,6 +15,10 @@ public class FortuneTeller {
 		int birthMonth = input.nextInt();
 		if (birthMonth>12)
 			System.out.println("Please enter a month from 1-12.");
+		int birthMonthWrong = input.nextInt();
+	
+		System.out.println("Please enter your favorite color from ROYGBIV.  Type 'help' for examples.");
+		
 		
 			
 		
