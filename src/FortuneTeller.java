@@ -27,5 +27,13 @@ public class FortuneTeller {
 		favoriteColor = input.nextLine();
 System.out.println("How many siblings do you have?");
 int siblings = input.nextInt();
-	}
-}
+	
+	String retirement;
+	if (age %2==0) {
+	retirement="20 years";
+	}else if (!(age %2==0)){
+	retirement="never";}
+	
+	
+	System.out.println();
+	}}
