@@ -13,7 +13,7 @@ public class FortuneTeller {
 		int age = input.nextInt();
 		System.out.println("Please enter your birth month in numeric form.");
 		int birthMonth = input.nextInt();
-	   
+
 		System.out.println(
 				"Please enter your favorite color from ROYGBIV using the full word.  Type 'help' for examples.");
 		String favoriteColor = input.nextLine();
@@ -35,14 +35,14 @@ public class FortuneTeller {
 			System.out.println("How many siblings do you have?");
 			int siblings = input.nextInt();
 
-			String retirement=input.nextLine();
+			String retirement = input.nextLine();
 			if (age % 2 == 0) {
-				retirement = "20";
+				retirement = "22";
 			} else if (!(age % 2 == 0)) {
-				retirement = "45";
+				retirement = "409";
 			}
 
-			String vacation =null;
+			String vacation = null;
 			if (siblings == 0) {
 				vacation = "Salem, Ohio";
 			} else if (siblings == 1) {
@@ -59,25 +59,25 @@ public class FortuneTeller {
 
 			String transportation = null;
 			switch (favoriteColor.toLowerCase()) {
-			case "r":
+			case "red":
 				transportation = "camel";
 				break;
-			case "o":
+			case "orange":
 				transportation = "bat";
 				break;
-			case "y":
+			case "yellow":
 				transportation = "bear";
 				break;
-			case "g":
+			case "green":
 				transportation = "bull";
 				break;
-			case "b":
+			case "blue":
 				transportation = "dog";
 				break;
-			case "i":
+			case "indigo":
 				transportation = "cat";
 				break;
-			case "v":
+			case "violet":
 				transportation = "horse";
 				break;
 			}
@@ -85,15 +85,20 @@ public class FortuneTeller {
 			String bankAmount = null;
 			if (birthMonth >= 0 && birthMonth <= 4) {
 				bankAmount = "$1,000";
-										
-			} else if (birthMonth >= 5 && birthMonth <= 8) {
-				bankAmount = "99,999,999.99";
-			} else if (birthMonth >= 9 && birthMonth <= 12) {
-				bankAmount = "0.99";
-			} else if (birthMonth < 0 && birthMonth > 12) {
-				bankAmount = "broke";
-		} else {}
-		
-System.out.println(firstName + " " + lastName + " will retire in " + retirement + " with " + bankAmount + " in the bank, a vacation home in " + vacation + ", and travel by" + transportation + ".");
 
-		}}}	
+			} else if (birthMonth >= 5 && birthMonth <= 8) {
+				bankAmount = "$99,999,999.99";
+			} else if (birthMonth >= 9 && birthMonth <= 12) {
+				bankAmount = "$0.99";
+			} else if (birthMonth < 0 || birthMonth > 12) {
+				bankAmount = "nothing";
+			} 
+			else {
+			}
+			System.out.println(firstName + " " + lastName + " will retire in " + retirement + " years with "
+					+ bankAmount + " in the bank, a vacation home in " + vacation + ", and travel by " + transportation
+					+ ".");
+
+		}
+	}
+}
