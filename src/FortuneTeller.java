@@ -14,10 +14,11 @@ public class FortuneTeller {
 		System.out.println("Please enter your birth month in numeric form.");
 		int birthMonth = input.nextInt();
 		System.out.println(
-				"Please enter your favorite color from ROYGBIV using the full word.\nType 'help' for examples then enter your favorite color.");
+				"Please enter your favorite color from ROYGBIV using the full word.\nType 'help' for examples.");
 		String favoriteColor = input.next();
 		if (favoriteColor.equalsIgnoreCase("help")) {
-			System.out.println("Please type color from list:\nRed\nOrange\nYellow\nGreen\nBlue\nIndigo\nViolet");
+			System.out.println(
+					"Please enter your favorite color from the following list:\nRed\nOrange\nYellow\nGreen\nBlue\nIndigo\nViolet");
 			favoriteColor = input.next();
 		}
 
@@ -33,17 +34,17 @@ public class FortuneTeller {
 
 		String vacation = null;
 		if (siblings == 0) {
-			vacation = "Salem, Ohio";
+			vacation = "The Cayman Islands";
 		} else if (siblings == 1) {
-			vacation = "Centralia, Pennsylvania";
+			vacation = "Denver, Colorado";
 		} else if (siblings == 2) {
-			vacation = "Batesville, Indiana";
+			vacation = "Melbourne, Austrlia";
 		} else if (siblings == 3) {
-			vacation = "Spitsbergen, Norway";
+			vacation = "Tuscany, Italy";
 		} else if (siblings > 3) {
 			vacation = "Kona, Hawaii";
 		} else if (siblings < 0) {
-			vacation = "Mother Russia";
+			vacation = "Spitsbergen, Norway";
 		}
 
 		String transportation = null;
@@ -52,33 +53,33 @@ public class FortuneTeller {
 			transportation = "camel";
 			break;
 		case "orange":
-			transportation = "bat";
+			transportation = "helicopter";
 			break;
 		case "yellow":
-			transportation = "bear";
+			transportation = "chauffeur";
 			break;
 		case "green":
-			transportation = "bull";
+			transportation = "minivan";
 			break;
 		case "blue":
-			transportation = "dog";
+			transportation = "public transportation";
 			break;
 		case "indigo":
 			transportation = "cat";
 			break;
 		case "violet":
-			transportation = "horse";
+			transportation = "a hoverboard that actually hovers";
 			break;
 		}
 
 		String bankAmount = null;
 		if (birthMonth >= 0 && birthMonth <= 4) {
-			bankAmount = "$1,000";
+			bankAmount = "$825,000";
 
 		} else if (birthMonth >= 5 && birthMonth <= 8) {
 			bankAmount = "$99,999,999.99";
 		} else if (birthMonth >= 9 && birthMonth <= 12) {
-			bankAmount = "$0.99";
+			bankAmount = "$19,999.37";
 		} else if (birthMonth < 0 || birthMonth > 12) {
 			bankAmount = "nothing";
 		} else {
