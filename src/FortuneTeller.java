@@ -15,18 +15,18 @@ public class FortuneTeller {
 		int birthMonth = input.nextInt();
 		System.out.println(
 				"Please enter your favorite color from ROYGBIV using the full word.\nType 'help' for examples then enter your favorite color.");
-		String favoriteColor = input.nextLine();
-		if (favoriteColor.toLowerCase().contains("help")) {
+		String favoriteColor = input.next();
+		if (favoriteColor.equalsIgnoreCase("help")) {
 			System.out.println("Please type color from list:\nRed\nOrange\nYellow\nGreen\nBlue\nIndigo\nViolet");
-		} else {
-			favoriteColor = input.nextLine();}
+			favoriteColor=input.next();
+		} 
 
 		System.out.println("How many siblings do you have?");
-		int siblings = input.nextInt();
+		int siblings = input.nextInt();	
 
 		String retirement = input.nextLine();
 		if (age % 2 == 0) {
-			retirement = "22";
+			retirement = "5";
 		} else if (!(age % 2 == 0)) {
 			retirement = "409";
 		}
@@ -43,7 +43,7 @@ public class FortuneTeller {
 		} else if (siblings > 3) {
 			vacation = "Kona, Hawaii";
 		} else if (siblings < 0) {
-			vacation = "Russia";
+			vacation = "Mother Russia";
 		}
 
 		String transportation = null;
