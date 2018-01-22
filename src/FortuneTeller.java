@@ -18,11 +18,11 @@ public class FortuneTeller {
 		String favoriteColor = input.next();
 		if (favoriteColor.equalsIgnoreCase("help")) {
 			System.out.println("Please type color from list:\nRed\nOrange\nYellow\nGreen\nBlue\nIndigo\nViolet");
-			favoriteColor=input.next();
-		} 
+			favoriteColor = input.next();
+		}
 
 		System.out.println("How many siblings do you have?");
-		int siblings = input.nextInt();	
+		int siblings = input.nextInt();
 
 		String retirement = input.nextLine();
 		if (age % 2 == 0) {
