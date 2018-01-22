@@ -13,92 +13,78 @@ public class FortuneTeller {
 		int age = input.nextInt();
 		System.out.println("Please enter your birth month in numeric form.");
 		int birthMonth = input.nextInt();
-
 		System.out.println(
-				"Please enter your favorite color from ROYGBIV using the full word.  Type 'help' for examples.");
+				"Please enter your favorite color from ROYGBIV using the full word.\nType 'help' for examples then enter your favorite color.");
 		String favoriteColor = input.nextLine();
-		if (favoriteColor.equalsIgnoreCase("help")) {
-			System.out.println(
-					"R is Red\nO is Orange\nY is Yellow\nG is Green\nB is Blue\nI is Indigo\nV is Violet\nNow please enter your favorite color.");
+		if (favoriteColor.toLowerCase().contains("help")) {
+			System.out.println("Please type color from list:\nRed\nOrange\nYellow\nGreen\nBlue\nIndigo\nViolet");
+		} else {
+			favoriteColor = input.nextLine();}
+
+		System.out.println("How many siblings do you have?");
+		int siblings = input.nextInt();
+
+		String retirement = input.nextLine();
+		if (age % 2 == 0) {
+			retirement = "22";
+		} else if (!(age % 2 == 0)) {
+			retirement = "409";
 		}
-		favoriteColor = input.nextLine();
-		{
-			if (favoriteColor.equalsIgnoreCase("red")) {
-			} else if (favoriteColor.equalsIgnoreCase("orange")) {
-			} else if (favoriteColor.equalsIgnoreCase("yellow")) {
-			} else if (favoriteColor.equalsIgnoreCase("green")) {
-			} else if (favoriteColor.equalsIgnoreCase("blue")) {
-			} else if (favoriteColor.equalsIgnoreCase("indigo")) {
-			} else if (favoriteColor.equalsIgnoreCase("violet"))
-				;
 
-			System.out.println("How many siblings do you have?");
-			int siblings = input.nextInt();
-
-			String retirement = input.nextLine();
-			if (age % 2 == 0) {
-				retirement = "22";
-			} else if (!(age % 2 == 0)) {
-				retirement = "409";
-			}
-
-			String vacation = null;
-			if (siblings == 0) {
-				vacation = "Salem, Ohio";
-			} else if (siblings == 1) {
-				vacation = "Centralia, Pennsylvania";
-			} else if (siblings == 2) {
-				vacation = "Batesville, Indiana";
-			} else if (siblings == 3) {
-				vacation = "Spitsbergen, Norway";
-			} else if (siblings > 3) {
-				vacation = "Kona, Hawaii";
-			} else if (siblings < 0) {
-				vacation = "Russia";
-			}
-
-			String transportation = null;
-			switch (favoriteColor.toLowerCase()) {
-			case "red":
-				transportation = "camel";
-				break;
-			case "orange":
-				transportation = "bat";
-				break;
-			case "yellow":
-				transportation = "bear";
-				break;
-			case "green":
-				transportation = "bull";
-				break;
-			case "blue":
-				transportation = "dog";
-				break;
-			case "indigo":
-				transportation = "cat";
-				break;
-			case "violet":
-				transportation = "horse";
-				break;
-			}
-
-			String bankAmount = null;
-			if (birthMonth >= 0 && birthMonth <= 4) {
-				bankAmount = "$1,000";
-
-			} else if (birthMonth >= 5 && birthMonth <= 8) {
-				bankAmount = "$99,999,999.99";
-			} else if (birthMonth >= 9 && birthMonth <= 12) {
-				bankAmount = "$0.99";
-			} else if (birthMonth < 0 || birthMonth > 12) {
-				bankAmount = "nothing";
-			} 
-			else {
-			}
-			System.out.println(firstName + " " + lastName + " will retire in " + retirement + " years with "
-					+ bankAmount + " in the bank, a vacation home in " + vacation + ", and travel by " + transportation
-					+ ".");
-
+		String vacation = null;
+		if (siblings == 0) {
+			vacation = "Salem, Ohio";
+		} else if (siblings == 1) {
+			vacation = "Centralia, Pennsylvania";
+		} else if (siblings == 2) {
+			vacation = "Batesville, Indiana";
+		} else if (siblings == 3) {
+			vacation = "Spitsbergen, Norway";
+		} else if (siblings > 3) {
+			vacation = "Kona, Hawaii";
+		} else if (siblings < 0) {
+			vacation = "Russia";
 		}
+
+		String transportation = null;
+		switch (favoriteColor.toLowerCase()) {
+		case "red":
+			transportation = "camel";
+			break;
+		case "orange":
+			transportation = "bat";
+			break;
+		case "yellow":
+			transportation = "bear";
+			break;
+		case "green":
+			transportation = "bull";
+			break;
+		case "blue":
+			transportation = "dog";
+			break;
+		case "indigo":
+			transportation = "cat";
+			break;
+		case "violet":
+			transportation = "horse";
+			break;
+		}
+
+		String bankAmount = null;
+		if (birthMonth >= 0 && birthMonth <= 4) {
+			bankAmount = "$1,000";
+
+		} else if (birthMonth >= 5 && birthMonth <= 8) {
+			bankAmount = "$99,999,999.99";
+		} else if (birthMonth >= 9 && birthMonth <= 12) {
+			bankAmount = "$0.99";
+		} else if (birthMonth < 0 || birthMonth > 12) {
+			bankAmount = "nothing";
+		} else {
+		}
+		System.out.println(firstName + " " + lastName + " will retire in " + retirement + " years with " + bankAmount
+				+ " in the bank, a vacation home in " + vacation + ", and travel by " + transportation + ".");
+
 	}
 }
